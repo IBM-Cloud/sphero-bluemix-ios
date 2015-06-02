@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Attribute "id" must be identical to application folder name -->
+<application xmlns="http://www.worklight.com/application-descriptor" id="MYAPP" platformVersion="5.0.6">
+    <displayName>Chariot</displayName>
+    <description>Connect a Sphero chariot to the Internet of Things for real-time driver analytics</description>
+    <author>
+        <name>IBM</name>
+        <email></email>
+        <homepage>http://ibm.com</homepage>
+        <copyright>Copyright IBM</copyright>
+    </author>
+    <height>460</height>
+    <width>320</width>
+    <mainFile>SampleApp.html</mainFile>
+    <thumbnailImage>common/images/thumbnail.png</thumbnailImage>
+    <iphone bundleId="com.ibm.cio.be.iphone.bboyd.Chariot" version="1.0">
+        <worklightSettings include="true"/>
+        <security>
+            <encryptWebResources enabled="false"/>
+            <testWebResourcesChecksum enabled="false" ignoreFileExtensions="png, jpg, jpeg, gif, mp4, mp3"/>
+        </security>
+    </iphone>
+    <worklightServerRootURL>http://${local.IPAddress}:8080</worklightServerRootURL>
+</application>
